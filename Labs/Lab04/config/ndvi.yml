@@ -1,0 +1,31 @@
+database: C:\Users\micha\AGH\Automated workflows in satellite image processing\automated-workflows-labs\Labs\Lab04\state\catalogue.sqlite
+science:
+  stage: ndvi_v1
+  grid_policy: require_match
+  scaling: reviewed_calibration
+  mask_policy: nodata_only
+  denominator_epsilon: 1.0e-06
+  min_valid_fraction: 0.1
+  calibration:
+    red:
+      sha256: 8363a5d2259d08d542985156aae667a6d37211dad1900f8c836c93f055c60a2a
+      scale: 0.0001
+      offset: 0.0
+      evidence: Local pixels, grid and radiometric metadata match the preserved Lab04
+        sample. Interpretation follows NDVI_Visual_Investigation_v1_20261022_Student/CALIBRATION_REVIEW.md;
+        captured boa_offset_applied=true conflicts with offset=-0.1. Teaching review
+        for these exact local hashes; no independent source JP2 comparison.
+    nir:
+      sha256: b8cf04708203ae6ee6a7306f4232b7a69370a397a14a05da1dd41bdb45bf0e49
+      scale: 0.0001
+      offset: 0.0
+      evidence: Local pixels, grid and radiometric metadata match the preserved Lab04
+        sample. Interpretation follows NDVI_Visual_Investigation_v1_20261022_Student/CALIBRATION_REVIEW.md;
+        captured boa_offset_applied=true conflicts with offset=-0.1. Teaching review
+        for these exact local hashes; no independent source JP2 comparison.
+  inputs:
+    red: input-59c9437e300a3549f75913bc0b4eeace6430e4be531fe988dded691a43ee71db
+    nir: input-dcfea4a7d5a3e6efc655301bc757ff7fe2477914191628bd3c8b81aabf39292e
+runtime:
+  output_dir: C:\Users\micha\AGH\Automated workflows in satellite image processing\automated-workflows-labs\Labs\Lab04\outputs
+  log_dir: C:\Users\micha\AGH\Automated workflows in satellite image processing\automated-workflows-labs\Labs\Lab04\logs
