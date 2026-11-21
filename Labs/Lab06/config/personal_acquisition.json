@@ -1,14 +1,15 @@
 {
   "aois": {
     "my_aoi": [
-      19.91,
-      50.04,
-      19.94,
-      50.06
+      19.842,
+      50.047,
+      19.856,
+      50.057
     ]
   },
   "item_ids": [
-    "REPLACE_WITH_AN_ITEM_FROM_SEARCH"
+    "S2C_T34UDA_20250605T095638_L2A",
+    "S2B_T34UDA_20250610T095316_L2A"
   ],
   "bands": [
     "nir",

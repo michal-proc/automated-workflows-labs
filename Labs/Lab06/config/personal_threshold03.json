@@ -1,0 +1,71 @@
+{
+  "database": "../work/personal/catalogue.sqlite",
+  "workspace": "../work/personal",
+  "max_attempts": 2,
+  "jobs": [
+    {
+      "member_id": "my_aoi-20250605",
+      "item_id": "S2C_T34UDA_20250605T095638_L2A",
+      "aoi_bbox": [
+        19.842,
+        50.047,
+        19.856,
+        50.057
+      ],
+      "product": "ndmi",
+      "plugin": "../extensions/my_product.py",
+      "parameters": {
+        "epsilon": 1e-06,
+        "threshold": 0.3
+      },
+      "preparation": {
+        "resolution_m": 20,
+        "mask_policy": "scl",
+        "excluded_scl": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "member_id": "my_aoi-20250610",
+      "item_id": "S2B_T34UDA_20250610T095316_L2A",
+      "aoi_bbox": [
+        19.842,
+        50.047,
+        19.856,
+        50.057
+      ],
+      "product": "ndmi",
+      "plugin": "../extensions/my_product.py",
+      "parameters": {
+        "epsilon": 1e-06,
+        "threshold": 0.3
+      },
+      "preparation": {
+        "resolution_m": 20,
+        "mask_policy": "scl",
+        "excluded_scl": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    }
+  ]
+}

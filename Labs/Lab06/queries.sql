@@ -55,3 +55,14 @@ FROM processing_attempts
 WHERE status='succeeded' AND json_extract(receipt_json,'$.contract')='optical-product-v1';
 
 -- Add your own question, SQL and interpretation below.
+
+SELECT a.attempt_id,
+       json_extract(r.normalized_json, '$.product.name') AS product,
+       json_extract(r.normalized_json, '$.parameters.threshold') AS threshold,
+       json_extract(a.receipt_json, '$.metrics.valid_fraction') AS valid_fraction,
+       json_extract(a.receipt_json, '$.metrics.product_metrics.mean_ndmi') AS mean_ndmi,
+       json_extract(a.receipt_json, '$.metrics.product_metrics.above_threshold_area_m2') AS above_threshold_area_m2
+FROM processing_attempts a
+JOIN processing_requests r USING(request_id)
+WHERE a.status = 'succeeded' AND json_extract(r.normalized_json, '$.product.name') = 'ndmi'
+ORDER BY a.started_at;
